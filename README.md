@@ -94,6 +94,8 @@ Por exemplo, quando o serviço de empréstimos precisa verificar um livro:
 
 service-emprestimos
         │
+        |
+        
         │   GET /livros/1
         ▼
 service-livros
