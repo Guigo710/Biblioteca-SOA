@@ -126,16 +126,20 @@ Isso mantém os serviços desacoplados e permite que cada um gerencie seus próp
 Cada serviço segue uma estrutura em camadas:
 
 Controller
+
      │
      ▼
   Service
+  
      │
      ▼
  Repository
+ 
      │
      ▼
   Database
-Controller
+  
+## Controller
 
 Responsável por receber as requisições HTTP.
 
@@ -173,39 +177,41 @@ public class Livro {
     // atributos
 }
 ## 📁 Estrutura do projeto
-biblioteca-soa/
-│
-├── service-livros/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/biblioteca/livros/
-│   │       │       ├── controller/
-│   │       │       ├── service/
-│   │       │       ├── repository/
-│   │       │       └── model/
-│   │       │
-│   │       └── resources/
-│   │           └── application.properties
-│   │
-│   └── pom.xml
-│
-├── service-usuarios/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/biblioteca/usuarios/
-│   │       │       ├── controller/
-│   │       │       ├── service/
-│   │       │       ├── repository/
-│   │       │       └── model/
-│   │       │
-│   │       └── resources/
-│   │           └── application.properties
-│   │
-│   └── pom.xml
-│
-└── service-emprestimos/
+biblioteca-soa/ 
+ | 
+ |
+ │
+ ├── service-livros/
+ │   ├── src/
+ │   │   └── main/
+ │   │       ├── java/
+ │   │       │   └── com/biblioteca/livros/
+ │   │       │       ├── controller/
+ │   │       │       ├── service/
+ │   │       │       ├── repository/
+ │   │       │       └── model/
+ │   │       │
+ │   │       └── resources/
+ │   │           └── application.properties
+ │   │
+ │   └── pom.xml
+ │
+ ├── service-usuarios/
+ │   ├── src/
+ │   │   └── main/
+ │   │       ├── java/
+ │   │       │   └── com/biblioteca/usuarios/
+ │   │       │       ├── controller/
+ │   │       │       ├── service/
+ │   │       │       ├── repository/
+ │   │       │       └── model/
+ │   │       │
+ │   │       └── resources/
+ │   │           └── application.properties
+ │   │
+ │   └── pom.xml
+ │
+ └── service-emprestimos/
     ├── src/
     │   └── main/
     │       ├── java/
