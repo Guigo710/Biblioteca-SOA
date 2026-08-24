@@ -37,11 +37,12 @@ A aplicação é dividida em três serviços principais:
                                │
                                ▼
                             H2 DB
-Serviços
-Serviço	Porta	Responsabilidade
-service-livros	8081	Gerenciamento de livros
-service-usuarios	8082	Gerenciamento de usuários
-service-emprestimos	8083	Gerenciamento de empréstimos
+## Serviços
+   Serviço          |	 Porta |	Responsabilidade           |
+--------            |	 ----- |	----------------           |
+service-livros      |	8081	 | Gerenciamento de livros     |
+service-usuarios    |	8082	 | Gerenciamento de usuários   |
+service-emprestimos | 8083	 | Gerenciamento de empréstimos|
 
 Cada serviço é uma aplicação Spring Boot independente, com seu próprio pom.xml, banco e regras de negócio.
 
