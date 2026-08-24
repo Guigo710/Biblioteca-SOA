@@ -63,30 +63,30 @@ Cada serviço possui sua própria responsabilidade.
 
 Por exemplo:
 
-📚 Serviço de Livros
+## 📚 Serviço de Livros
 
 Responsável por:
 
-cadastrar livros;
-consultar livros;
-listar livros;
-controlar disponibilidade.
-👤 Serviço de Usuários
+- cadastrar livros;
+- consultar livros;
+- listar livros;
+- controlar disponibilidade.
+## 👤 Serviço de Usuários
 
 Responsável por:
 
-cadastrar usuários;
-consultar usuários;
-listar usuários.
-📖 Serviço de Empréstimos
+- cadastrar usuários;
+- consultar usuários;
+- listar usuários.
+## 📖 Serviço de Empréstimos
 
 Responsável por:
 
-criar empréstimos;
-consultar empréstimos;
-validar se o livro existe;
-validar se o usuário existe.
-🔗 Comunicação entre os serviços
+- criar empréstimos;
+- consultar empréstimos;
+- validar se o livro existe;
+- validar se o usuário existe.
+## 🔗 Comunicação entre os serviços
 
 Os serviços não acessam diretamente o banco de dados uns dos outros.
 
@@ -116,7 +116,7 @@ Essa comunicação é realizada através de HTTP/REST.
 
 Isso mantém os serviços desacoplados e permite que cada um gerencie seus próprios dados.
 
-🧩 Arquitetura interna dos serviços
+## 🧩 Arquitetura interna dos serviços
 
 Cada serviço segue uma estrutura em camadas:
 
@@ -136,10 +136,11 @@ Responsável por receber as requisições HTTP.
 
 Exemplo:
 
-POST /livros
-GET  /livros
-GET  /livros/{id}
-Service
+- POST /livros
+- GET  /livros
+- GET  /livros/{id}
+  
+  ## Service
 
 Contém as regras de negócio.
 
@@ -149,14 +150,14 @@ public Livro cadastrar(Livro livro) {
     livro.setDisponivel(true);
     return repository.save(livro);
 }
-Repository
+## Repository
 
 Responsável pelo acesso aos dados utilizando Spring Data JPA.
 
 public interface LivroRepository
         extends JpaRepository<Livro, Long> {
 }
-Model
+## Model
 
 Representa as entidades persistidas no banco.
 
@@ -165,7 +166,7 @@ Representa as entidades persistidas no banco.
 public class Livro {
     // atributos
 }
-📁 Estrutura do projeto
+## 📁 Estrutura do projeto
 biblioteca-soa/
 │
 ├── service-livros/
@@ -215,18 +216,18 @@ biblioteca-soa/
     │           └── application.properties
     │
     └── pom.xml
-🛠️ Tecnologias utilizadas
-Java 21
-Spring Boot
-Spring Web
-Spring Data JPA
-Hibernate
-H2 Database
-Maven
-REST API
-HTTP
-Git/GitHub
-▶️ Como executar
+##🛠️ Tecnologias utilizadas
+- Java 21
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Hibernate
+- H2 Database
+- Maven
+- REST API
+- HTTP
+- Git/GitHub
+##▶️ Como executar
 
 Como cada serviço é uma aplicação Spring Boot independente, cada um deve ser executado separadamente.
 
