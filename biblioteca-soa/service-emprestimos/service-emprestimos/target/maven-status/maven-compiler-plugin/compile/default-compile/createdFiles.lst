@@ -1,0 +1,4 @@
+com\example\service_emprestimos\repository\EmprestimoRepository.class
+com\example\service_emprestimos\ServiceEmprestimosApplication.class
+com\example\service_emprestimos\client\UsuarioClient.class
+com\example\service_emprestimos\model\Emprestimo.class
