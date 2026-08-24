@@ -177,56 +177,45 @@ public class Livro {
     // atributos
 }
 ## 📁 Estrutura do projeto
-biblioteca-soa/ 
- | 
- |
- │
- ├── service-livros/
- │   ├── src/
- │   │   └── main/
- │   │       ├── java/
- │   │       │   └── com/biblioteca/livros/
- │   │       │       ├── controller/
- │   │       │       ├── service/
- │   │       │       ├── repository/
- │   │       │       └── model/
- │   │       │
- │   │       └── resources/
- │   │           └── application.properties
- │   │
- │   └── pom.xml
- │
- ├── service-usuarios/
- │   ├── src/
- │   │   └── main/
- │   │       ├── java/
- │   │       │   └── com/biblioteca/usuarios/
- │   │       │       ├── controller/
- │   │       │       ├── service/
- │   │       │       ├── repository/
- │   │       │       └── model/
- │   │       │
- │   │       └── resources/
- │   │           └── application.properties
- │   │
- │   └── pom.xml
- │
- └── service-emprestimos/
+biblioteca-soa/
+├── service-livros/
+│   ├── src/
+│   │   └── main/
+│   │       └── java/
+│   │           └── com/biblioteca/livros/
+│   │               ├── controller/
+│   │               ├── service/
+│   │               ├── repository/
+│   │               └── model/
+│   │       └── resources/
+│   │           └── application.properties
+│   └── pom.xml
+├── service-usuarios/
+│   ├── src/
+│   │   └── main/
+│   │       └── java/
+│   │           └── com/biblioteca/usuarios/
+│   │               ├── controller/
+│   │               ├── service/
+│   │               ├── repository/
+│   │               └── model/
+│   │       └── resources/
+│   │           └── application.properties
+│   └── pom.xml
+└── service-emprestimos/
     ├── src/
     │   └── main/
-    │       ├── java/
-    │       │   └── com/biblioteca/emprestimos/
-    │       │       ├── controller/
-    │       │       ├── service/
-    │       │       ├── repository/
-    │       │       ├── model/
-    │       │       └── client/
-    │       │           ├── LivroClient.java
-    │       │           └── UsuarioClient.java
-    │       │
+    │       └── java/
+    │           └── com/biblioteca/emprestimos/
+    │               ├── controller/
+    │               ├── service/
+    │               ├── repository/
+    │               ├── model/
+    │               └── client/
+    │                   ├── LivroClient.java
+    │                   └── UsuarioClient.java
     │       └── resources/
     │           └── application.properties
-    │
     └── pom.xml
 ##🛠️ Tecnologias utilizadas
 - Java 21
