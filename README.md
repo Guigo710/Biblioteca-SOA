@@ -177,7 +177,7 @@ public class Livro {
     // atributos
 }
 ## 📁 Estrutura do projeto
-biblioteca-soa/
+'''biblioteca-soa/
 ├── service-livros/
 │   ├── src/
 │   │   └── main/
@@ -216,7 +216,7 @@ biblioteca-soa/
     │                   └── UsuarioClient.java
     │       └── resources/
     │           └── application.properties
-    └── pom.xml
+    └── pom.xml'''
 ##🛠️ Tecnologias utilizadas
 - Java 21
 - Spring Boot
