@@ -151,7 +151,8 @@ Contém as regras de negócio.
 
 Exemplo:
 
-public Livro cadastrar(Livro livro) {
+public Livro cadastrar(Livro livro) 
+{
     livro.setDisponivel(true);
     return repository.save(livro);
 }
