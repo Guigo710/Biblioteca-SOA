@@ -93,12 +93,13 @@ Os serviços não acessam diretamente o banco de dados uns dos outros.
 Por exemplo, quando o serviço de empréstimos precisa verificar um livro:
 
 service-emprestimos
+
         │
-        |
-        
+        |  
         │   GET /livros/1
         ▼
 service-livros
+
         │
         ▼
       H2 DB
@@ -106,10 +107,12 @@ service-livros
 Para verificar um usuário:
 
 service-emprestimos
+
         │
         │  GET /usuarios/1
         ▼
 service-usuarios
+
         │
         ▼
       H2 DB
