@@ -123,7 +123,7 @@ Isso mantém os serviços desacoplados e permite que cada um gerencie seus próp
 ## 🧩 Arquitetura interna dos serviços
 
 Cada serviço segue uma estrutura em camadas:
-
+<pre>
 Controller
 
      │
@@ -137,7 +137,7 @@ Controller
      │
      ▼
   Database
-  
+</pre>  
 ## Controller
 
 Responsável por receber as requisições HTTP.
@@ -235,47 +235,42 @@ public class Livro {
 
 Como cada serviço é uma aplicação Spring Boot independente, cada um deve ser executado separadamente.
 
-1. Clone o projeto
+## 1. Clone o projeto 
 git clone <URL_DO_REPOSITORIO>
 cd biblioteca-soa
-2. Execute o serviço de livros
+## 2. Execute o serviço de livros
 
-Entre na pasta:
-
-cd service-livros
+- Entre na pasta:
+ cd service-livros
 
 No Windows:
 
-.\mvnw.cmd spring-boot:run
+- .\mvnw.cmd spring-boot:run
 
 O serviço estará disponível em:
 
 http://localhost:8081
-3. Execute o serviço de usuários
 
-Abra outro terminal:
+## 3. Execute o serviço de usuários
 
+- Abra outro terminal:
 cd service-usuarios
 
-Execute:
-
+- Execute:
 .\mvnw.cmd spring-boot:run
 
-Disponível em:
-
+- Disponível em:
 http://localhost:8082
-4. Execute o serviço de empréstimos
 
-Abra um terceiro terminal:
+## 4. Execute o serviço de empréstimos
 
+- Abra um terceiro terminal:
 cd service-emprestimos
 
-Execute:
-
+- Execute:
 .\mvnw.cmd spring-boot:run
 
-Disponível em:
-
+- Disponível em:
 http://localhost:8083
 
 Ao final, os três serviços estarão funcionando simultaneamente:
@@ -283,30 +278,30 @@ Ao final, os três serviços estarão funcionando simultaneamente:
 service-livros       → localhost:8081
 service-usuarios     → localhost:8082
 service-emprestimos  → localhost:8083
-🧪 Exemplos de API
-📚 Livros
-Criar livro
+## 🧪 Exemplos de API
+## 📚 Livros
+## Criar livro
 POST http://localhost:8081/livros
 {
     "titulo": "Clean Code",
     "autor": "Robert C. Martin"
 }
-Listar livros
+## Listar livros
 GET http://localhost:8081/livros
-Buscar livro
+##Buscar livro
 GET http://localhost:8081/livros/1
-👤 Usuários
-Criar usuário
+##👤 Usuários
+##Criar usuário
 POST http://localhost:8082/usuarios
 {
     "nome": "Guilherme",
     "email": "guilherme@email.com"
 }
-Listar usuários
+##Listar usuários
 GET http://localhost:8082/usuarios
-Buscar usuário
+##Buscar usuário
 GET http://localhost:8082/usuarios/1
-📖 Empréstimos
+##📖 Empréstimos
 Criar empréstimo
 POST http://localhost:8083/emprestimos
 {
@@ -333,8 +328,8 @@ Durante a criação do empréstimo, o serviço verifica:
                          │
                          ▼
                   Criar empréstimo
-🗄️ Banco de dados
-
+##🗄️ Banco de dados
+<pre></pre>
 Cada serviço possui seu próprio banco H2.
 
 service-livros
@@ -348,15 +343,16 @@ service-usuarios
 service-emprestimos
       │
       └── H2 → emprestimos
+</pre>
 
 Essa separação evita que um serviço dependa diretamente da estrutura interna do banco de outro serviço.
 
 A comunicação acontece através das APIs.
 
-🔄 Fluxo de um empréstimo
+## 🔄 Fluxo de um empréstimo
 
 Um exemplo completo:
-
+<pre></pre>
 1. Cliente solicita empréstimo
               │
               ▼
@@ -380,37 +376,38 @@ Um exemplo completo:
               │
               ▼
 5. H2 do service-emprestimos
-🎯 Objetivos do projeto
+</pre>
+## 🎯 Objetivos do projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
 
-Arquitetura Orientada a Serviços (SOA);
-desenvolvimento de APIs REST;
-comunicação entre aplicações Spring Boot;
-separação de responsabilidades;
-arquitetura em camadas;
-Spring Data JPA;
-persistência de dados;
-comunicação HTTP entre serviços;
-conceitos de desacoplamento;
-organização de aplicações distribuídas.
-📚 Conceitos demonstrados
-SOA
+- Arquitetura Orientada a Serviços (SOA);
+- desenvolvimento de APIs REST;
+- comunicação entre aplicações Spring Boot;
+- separação de responsabilidades;
+- arquitetura em camadas;
+- Spring Data JPA;
+- persistência de dados;
+- comunicação HTTP entre serviços;
+- conceitos de desacoplamento;
+- organização de aplicações distribuídas.
+## 📚 Conceitos demonstrados
+## SOA
 
 Serviços independentes organizados por responsabilidade de negócio.
 
-Baixo acoplamento
+## Baixo acoplamento
 
 Os serviços não dependem diretamente da implementação interna uns dos outros.
 
-API REST
+## API REST
 
 Os serviços disponibilizam funcionalidades através de endpoints HTTP.
 
-Separação de responsabilidades
+## Separação de responsabilidades
 
 Cada serviço possui uma função específica dentro do sistema.
 
-Banco por serviço
+## Banco por serviço
 
 Cada serviço mantém seus próprios dados e não acessa diretamente o banco dos demais.
