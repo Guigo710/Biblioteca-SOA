@@ -358,7 +358,7 @@ A comunicação acontece através das APIs.
 ## 🔄 Fluxo de um empréstimo
 
 Um exemplo completo:
-<pre></pre>
+<pre>
 1. Cliente solicita empréstimo
               │
               ▼
@@ -383,6 +383,7 @@ Um exemplo completo:
               ▼
 5. H2 do service-emprestimos
 </pre>
+
 ## 🎯 Objetivos do projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
