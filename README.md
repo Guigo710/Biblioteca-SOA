@@ -219,7 +219,7 @@ public class Livro {
     │           └── application.properties
     └── pom.xml
 
-
+</pre>
    
 ##🛠️ Tecnologias utilizadas
 - Java 21
