@@ -218,7 +218,9 @@ public class Livro {
     │       └── resources/
     │           └── application.properties
     └── pom.xml
-  <pre>
+
+
+   
 ##🛠️ Tecnologias utilizadas
 - Java 21
 - Spring Boot
