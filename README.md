@@ -220,7 +220,7 @@ public class Livro {
 
 </pre>
    
-##🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 - Java 21
 - Spring Boot
 - Spring Web
@@ -231,7 +231,7 @@ public class Livro {
 - REST API
 - HTTP
 - Git/GitHub
-##▶️ Como executar
+## ▶️ Como executar
 
 Como cada serviço é uma aplicação Spring Boot independente, cada um deve ser executado separadamente.
 
@@ -265,19 +265,25 @@ http://localhost:8082
 ## 4. Execute o serviço de empréstimos
 
 - Abra um terceiro terminal:
+
 cd service-emprestimos
 
 - Execute:
+
 .\mvnw.cmd spring-boot:run
 
 - Disponível em:
+
 http://localhost:8083
 
 Ao final, os três serviços estarão funcionando simultaneamente:
 
 service-livros       → localhost:8081
+
 service-usuarios     → localhost:8082
+
 service-emprestimos  → localhost:8083
+
 ## 🧪 Exemplos de API
 ## 📚 Livros
 ## Criar livro
@@ -288,20 +294,20 @@ POST http://localhost:8081/livros
 }
 ## Listar livros
 GET http://localhost:8081/livros
-##Buscar livro
+## Buscar livro
 GET http://localhost:8081/livros/1
-##👤 Usuários
-##Criar usuário
+## 👤 Usuários
+## Criar usuário
 POST http://localhost:8082/usuarios
 {
     "nome": "Guilherme",
     "email": "guilherme@email.com"
 }
-##Listar usuários
+## Listar usuários
 GET http://localhost:8082/usuarios
-##Buscar usuário
+## Buscar usuário
 GET http://localhost:8082/usuarios/1
-##📖 Empréstimos
+## 📖 Empréstimos
 Criar empréstimo
 POST http://localhost:8083/emprestimos
 {
@@ -309,7 +315,7 @@ POST http://localhost:8083/emprestimos
     "usuarioId": 1
 }
 
-Durante a criação do empréstimo, o serviço verifica:
+- Durante a criação do empréstimo, o serviço verifica:
 
                  POST /emprestimos
                          │
@@ -328,7 +334,7 @@ Durante a criação do empréstimo, o serviço verifica:
                          │
                          ▼
                   Criar empréstimo
-##🗄️ Banco de dados
+## 🗄️ Banco de dados
 <pre></pre>
 Cada serviço possui seu próprio banco H2.
 
