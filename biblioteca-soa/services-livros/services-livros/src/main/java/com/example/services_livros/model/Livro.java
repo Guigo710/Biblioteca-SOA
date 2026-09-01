@@ -27,7 +27,7 @@ public class Livro {
     }
 
     public Long getId(){
-        return id; // CORRIGIDO: Retorna o 'id' (Long) e não o 'titulo'
+        return id; //  Retorna o 'id' (Long) e não o 'titulo'
     }
 
     public String getTitulo(){
